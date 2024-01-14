@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html  lang= "en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration Form</title>
+    
+    
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+    .reg
+    {
+       background-color:#b4b4b4;
+            width: fit-content;
+            padding: 40px;
+            margin:auto;
+    }
+    label{
+    font-size:10px
+    }
+   
+    
+    </style> 
+</head>
+<body>
+
+   <!-- registration.html -->
+   
+   <form th:action="@{/register}" th:object="${user}" method="post">
+ 
+   <div class="reg">
+      
+  
+<div><h2>Registration<h2>
+ <div class="form-row">
+    <div class="col">
+         <label for="fullName">Full Name:</label>
+    <input type="text" class="form-control"  name="fullname" placeholder="Full name">
+         <label for="email">Email:</label>
+    <input type="email" name="email" class="form-control" placeholder="email">
+           <label for="password">Password:</label>
+    <input type="password"  name="password" class="form-control" placeholder="password">  
+          <label for="gender">Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+         <label for="female">Female</label>
+    <input type="radio" id="dummy" name="gender" value="perfernot">
+          <label for="prefer not say">prefer not say</label><br>
+    <button>Register</button>
+      
+    </div>
+    <div class="col">
+           <label for="user Name">User Name:</label>
+      <input type="text" class="form-control"   name="username" placeholder="User name">
+         <label for="phoneNo">Phone Number:</label>
+      <input type="text" class="form-control" name="phoneNo" placeholder="phone number">
+          <label for="conpassword">confirm Password:</label>
+      <input type="text" class="form-control" name=" confirm_Password" placeholder="confirm password">
+    </div>
+  </div>
+</div>
+</div>
+</form>
+   
+</body>
+</html>
